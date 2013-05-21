@@ -18,27 +18,28 @@ namespace VP_Songbook
         public Form1()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             Panels = new Panel[5];
             Panels[0] = panelIntro;
             Panels[0].Location = new Point(0, 0);
             Panels[0].Width = this.Width;
             Panels[0].Height = this.Height;
             Panels[1] = panelButtons;
-            Panels[1].Location = new Point(0, 27);
-            Panels[1].Width = this.Width;
-            Panels[1].Height = this.Height - 27;
+            Panels[1].Location = new Point(0, 0);
+         //   Panels[1].Width = this.Width;
+         //   Panels[1].Height = this.Height;
             Panels[2] = panelShowSongs;
-            Panels[2].Location = new Point(0, 27);
-            Panels[2].Width = this.Width;
-            Panels[2].Height = this.Height - 27;
+            Panels[2].Location = new Point(225, 0);
+            Panels[2].Width = this.Width-225;
+            Panels[2].Height = this.Height;
             Panels[3] = panelAddSong;
-            Panels[3].Location = new Point(0, 27);
-            Panels[3].Width = this.Width;
-            Panels[3].Height = this.Height - 27;
+            Panels[3].Location = new Point(225, 0);
+            Panels[3].Width = this.Width-225;
+            Panels[3].Height = this.Height;
             Panels[4] = panelAddCategory;
-            Panels[4].Location = new Point(0, 27);
-            Panels[4].Width = this.Width;
-            Panels[4].Height = this.Height - 27;
+            Panels[4].Location = new Point(225,0);
+            Panels[4].Width = this.Width-225;
+            Panels[4].Height = this.Height;
             Kontroler = new Controller(Panels);
             
         }
@@ -308,6 +309,11 @@ namespace VP_Songbook
             Kontroler.AddCategory(tbAddCategory.Text);
             tbAddCategory.Text = "";
             Kontroler.ShowPanel(1);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
 

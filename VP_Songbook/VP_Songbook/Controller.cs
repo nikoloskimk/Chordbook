@@ -60,6 +60,11 @@ namespace VP_Songbook
                     Panels[i].Hide();
                 }
             }
+            if (num != 0)
+            {
+                Panels[1].Show();
+            }
+            
         }
 
 

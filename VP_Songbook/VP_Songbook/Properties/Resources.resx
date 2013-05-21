@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gitara" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gitar2a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guitar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guitar.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GUITAR_INTRO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GUITAR-INTRO.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,26 +136,32 @@
   <data name="add_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gitara" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gitar2a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="guitar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\guitar.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="guitar_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guitar_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="guitar_clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guitar_clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="guitar_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guitar_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="guitar_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guitar_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GUITAR_INTRO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GUITAR-INTRO.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="guitar_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guitar_help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guitar_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guitar_info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guitar_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guitar_save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="guitar_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guitar_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guitar_write" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guitar_write.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="guitar_zoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guitar_zoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -44,16 +44,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelButtons = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnAddCategory = new System.Windows.Forms.Button();
             this.btnAddSong = new System.Windows.Forms.Button();
             this.btnShowSongs = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.мениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.naPocetna = new System.Windows.Forms.ToolStripMenuItem();
-            this.крајToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelShowSongs = new System.Windows.Forms.Panel();
             this.btnRandom = new System.Windows.Forms.Button();
             this.labelCategory = new System.Windows.Forms.Label();
@@ -74,10 +71,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tbAddCategory = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.panelAddSong.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelButtons.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panelShowSongs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panelAddCategory.SuspendLayout();
@@ -217,27 +214,44 @@
             // 
             // panelButtons
             // 
+            this.panelButtons.Controls.Add(this.button8);
+            this.panelButtons.Controls.Add(this.button7);
             this.panelButtons.Controls.Add(this.button6);
             this.panelButtons.Controls.Add(this.button5);
             this.panelButtons.Controls.Add(this.button4);
             this.panelButtons.Controls.Add(this.btnAddCategory);
             this.panelButtons.Controls.Add(this.btnAddSong);
             this.panelButtons.Controls.Add(this.btnShowSongs);
-            this.panelButtons.Location = new System.Drawing.Point(0, 27);
+            this.panelButtons.Location = new System.Drawing.Point(0, 0);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(984, 514);
+            this.panelButtons.Size = new System.Drawing.Size(225, 660);
             this.panelButtons.TabIndex = 1;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::VP_Songbook.Properties.Resources.guitar_help;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(9, 489);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(209, 81);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Помош";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::VP_Songbook.Properties.Resources.image_loading;
+            this.button6.Image = global::VP_Songbook.Properties.Resources.guitar_clock;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(666, 230);
+            this.button6.Location = new System.Drawing.Point(9, 329);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(277, 145);
+            this.button6.Size = new System.Drawing.Size(209, 81);
             this.button6.TabIndex = 5;
             this.button6.Text = "Листа на чекање";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -248,11 +262,11 @@
             this.button5.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::VP_Songbook.Properties.Resources.remove_2;
+            this.button5.Image = global::VP_Songbook.Properties.Resources.guitar_delete;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(355, 230);
+            this.button5.Location = new System.Drawing.Point(9, 169);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(277, 145);
+            this.button5.Size = new System.Drawing.Size(209, 81);
             this.button5.TabIndex = 4;
             this.button5.Text = "Избриши песна";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -263,11 +277,11 @@
             this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::VP_Songbook.Properties.Resources.listen_chord;
+            this.button4.Image = global::VP_Songbook.Properties.Resources.guitar_search;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(27, 230);
+            this.button4.Location = new System.Drawing.Point(9, 409);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(277, 145);
+            this.button4.Size = new System.Drawing.Size(209, 81);
             this.button4.TabIndex = 3;
             this.button4.Text = "Преслушај акорди";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -278,11 +292,11 @@
             this.btnAddCategory.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.Image = global::VP_Songbook.Properties.Resources.add_1;
+            this.btnAddCategory.Image = global::VP_Songbook.Properties.Resources.guitar_write;
             this.btnAddCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCategory.Location = new System.Drawing.Point(666, 33);
+            this.btnAddCategory.Location = new System.Drawing.Point(9, 249);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(277, 145);
+            this.btnAddCategory.Size = new System.Drawing.Size(209, 81);
             this.btnAddCategory.TabIndex = 2;
             this.btnAddCategory.Text = "Додади категорија";
             this.btnAddCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -294,11 +308,11 @@
             this.btnAddSong.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnAddSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSong.ForeColor = System.Drawing.Color.White;
-            this.btnAddSong.Image = global::VP_Songbook.Properties.Resources.add_2;
+            this.btnAddSong.Image = global::VP_Songbook.Properties.Resources.guitar_add;
             this.btnAddSong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddSong.Location = new System.Drawing.Point(355, 33);
+            this.btnAddSong.Location = new System.Drawing.Point(9, 89);
             this.btnAddSong.Name = "btnAddSong";
-            this.btnAddSong.Size = new System.Drawing.Size(277, 145);
+            this.btnAddSong.Size = new System.Drawing.Size(209, 81);
             this.btnAddSong.TabIndex = 1;
             this.btnAddSong.Text = "Додади песна";
             this.btnAddSong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -310,49 +324,16 @@
             this.btnShowSongs.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnShowSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowSongs.ForeColor = System.Drawing.Color.White;
-            this.btnShowSongs.Image = global::VP_Songbook.Properties.Resources.search;
+            this.btnShowSongs.Image = global::VP_Songbook.Properties.Resources.guitar_zoom;
             this.btnShowSongs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowSongs.Location = new System.Drawing.Point(27, 33);
+            this.btnShowSongs.Location = new System.Drawing.Point(9, 11);
             this.btnShowSongs.Name = "btnShowSongs";
-            this.btnShowSongs.Size = new System.Drawing.Size(277, 145);
+            this.btnShowSongs.Size = new System.Drawing.Size(209, 79);
             this.btnShowSongs.TabIndex = 0;
             this.btnShowSongs.Text = "Прикажи песни";
             this.btnShowSongs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnShowSongs.UseVisualStyleBackColor = false;
             this.btnShowSongs.Click += new System.EventHandler(this.btnShowSongs_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.мениToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // мениToolStripMenuItem
-            // 
-            this.мениToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.naPocetna,
-            this.крајToolStripMenuItem});
-            this.мениToolStripMenuItem.Name = "мениToolStripMenuItem";
-            this.мениToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.мениToolStripMenuItem.Text = "Мени";
-            // 
-            // naPocetna
-            // 
-            this.naPocetna.Name = "naPocetna";
-            this.naPocetna.Size = new System.Drawing.Size(137, 22);
-            this.naPocetna.Text = "На почетна";
-            this.naPocetna.Click += new System.EventHandler(this.naPocetna_Click);
-            // 
-            // крајToolStripMenuItem
-            // 
-            this.крајToolStripMenuItem.Name = "крајToolStripMenuItem";
-            this.крајToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.крајToolStripMenuItem.Text = "Крај";
-            this.крајToolStripMenuItem.Click += new System.EventHandler(this.крајToolStripMenuItem_Click);
             // 
             // panelShowSongs
             // 
@@ -565,6 +546,21 @@
             this.tbAddCategory.Size = new System.Drawing.Size(309, 20);
             this.tbAddCategory.TabIndex = 0;
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = global::VP_Songbook.Properties.Resources.guitar_close;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(9, 569);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(209, 81);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Излез";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,18 +570,15 @@
             this.Controls.Add(this.panelAddSong);
             this.Controls.Add(this.panelShowSongs);
             this.Controls.Add(this.panelIntro);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelAddCategory);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Песнарка со акорди";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelAddSong.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panelButtons.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panelShowSongs.ResumeLayout(false);
             this.panelShowSongs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -593,7 +586,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -602,8 +594,6 @@
         private System.Windows.Forms.Panel panelIntro;
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Button btnShowSongs;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem мениToolStripMenuItem;
         private System.Windows.Forms.Panel panelShowSongs;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddSong;
@@ -615,7 +605,6 @@
         private System.Windows.Forms.TextBox tbAddText;
         private System.Windows.Forms.TextBox tbAddName;
         private System.Windows.Forms.TextBox tbAddAuthor;
-        private System.Windows.Forms.ToolStripMenuItem naPocetna;
         private System.Windows.Forms.ComboBox cbAddSongCategory;
         private System.Windows.Forms.Button btnAddSongClear;
         private System.Windows.Forms.Label label6;
@@ -632,7 +621,6 @@
         private System.Windows.Forms.RadioButton rbSite;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.ComboBox cbShowCategory;
-        private System.Windows.Forms.ToolStripMenuItem крајToolStripMenuItem;
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Panel panelAddCategory;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -643,6 +631,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 
