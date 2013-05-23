@@ -18,18 +18,19 @@ namespace VP_Songbook
         Font font1, font2, font3; //креирање на референци за фонтови
         songbookEntities2 testcontext; //
         Color backgColor;
-        ListBox lbSongs;
+        ListBox lbSongs,lbRemoveSong;
         ComboBox cbShowCategory;
         ComboBox cbAddSongCategory;
         public int currentCategory { get; set; }
         public int numbSteps { get; set; } //до каде сме со анимацијата
 
-        public Controller(Panel[] panels, ListBox _lbSongs, ComboBox _cbShowCategory, ComboBox _cbAddSongCategory)
+        public Controller(Panel[] panels, ListBox _lbSongs, ComboBox _cbShowCategory, ComboBox _cbAddSongCategory, ListBox _lbRemoveSong)
         {
             Panels = panels;
             lbSongs = _lbSongs;
             cbShowCategory = _cbShowCategory;
             cbAddSongCategory = _cbAddSongCategory;
+            lbRemoveSong = _lbRemoveSong;
             currentCategory = -1;
             ShowPanel(0); // иницијално ги сокриваме сите панели
             Panels[1].Hide(); //како и панелот со мени
@@ -188,12 +189,23 @@ namespace VP_Songbook
         public void UpdateSongs()
         {
             int temp = lbSongs.SelectedIndex;
-            
+            int temp2 = lbRemoveSong.SelectedIndex;
+
             var load = from g in testcontext.songs select g;
             if (load != null)
             {
                 lbSongs.DataSource = load.ToList();
-                lbSongs.SelectedIndex = temp;
+                lbRemoveSong.DataSource = load.ToList();
+                // ако е избришана таа песна која е селектирана во пребарај песни
+                if (temp == temp2)
+                {
+                    lbSongs.SelectedIndex = -1;
+                }
+                else
+                {
+                    lbSongs.SelectedIndex = temp;
+                }
+                lbRemoveSong.SelectedIndex = -1;
             }
         }
 
@@ -247,6 +259,25 @@ namespace VP_Songbook
             }
 
             
+        }
+
+        public bool RemoveSong()
+        {
+            song p = lbRemoveSong.SelectedItem as song;
+            int songId = p.id_song;
+            try
+            {
+                song pesna = testcontext.songs.First(i => i.id_song == songId);
+                testcontext.songs.DeleteObject(pesna);
+                testcontext.SaveChanges();
+                UpdateSongs();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.InnerException.ToString());
+                return false;
+            }
         }
     }
 }

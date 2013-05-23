@@ -55,7 +55,7 @@ namespace VP_Songbook
             Panels[7].Width = this.Width - 225;
             Panels[7].Height = this.Height;
 
-            Kontroler = new Controller(Panels, lbSongs, cbShowCategory, cbAddSongCategory);
+            Kontroler = new Controller(Panels, lbSongs, cbShowCategory, cbAddSongCategory,lbRemoveSong);
 
         }
         //проверка на исправност на конекција
@@ -283,6 +283,32 @@ namespace VP_Songbook
 
 ////////////////////////////Panels[4] - Избриши песна ///////////////////////////////////
 
+        private void lbRemoveSong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblRemoveStatus.Text = "";
+        }
+
+        private void btnRemoveSong_Click(object sender, EventArgs e)
+        {
+            if (lbRemoveSong.SelectedIndex != -1)
+            {
+                if (MessageBox.Show("Дали сте сигурни дека сакате да ја избришете песната?",
+                    "Избриши песна?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    bool dali=Kontroler.RemoveSong();
+                    if (dali)
+                    {
+                        lblRemoveStatus.ForeColor = Color.Green;
+                        lblRemoveStatus.Text = "Песната е успешно избришана!";
+                    }
+                    else
+                    {
+                        lblRemoveStatus.ForeColor = Color.Red;
+                        lblRemoveStatus.Text = "Настана грешка при бришењето на песната!";
+                    }
+                }
+            }
+        }
 
 ////////////////////////////Panels[5] - Додади категорија ////////////////////////////////
         //додавање на категорија
@@ -464,6 +490,11 @@ namespace VP_Songbook
             player.Play();
             player.Dispose();
         }
+
+
+
+// ///////////////////////// do ovde///////////////
+
 
         
     }

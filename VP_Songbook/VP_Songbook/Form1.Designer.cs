@@ -78,9 +78,21 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panelRemoveSong = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.lblRemoveStatus = new System.Windows.Forms.Label();
+            this.btnRemoveSong = new System.Windows.Forms.Button();
+            this.lbRemoveSong = new System.Windows.Forms.ListBox();
             this.panelListenChords = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnChordHm = new System.Windows.Forms.Button();
+            this.btnChordASm = new System.Windows.Forms.Button();
+            this.btnChordAm = new System.Windows.Forms.Button();
+            this.btnChordGSm = new System.Windows.Forms.Button();
+            this.btnChordGm = new System.Windows.Forms.Button();
+            this.btnChordFm = new System.Windows.Forms.Button();
+            this.btnChordEm = new System.Windows.Forms.Button();
+            this.btnChordDSm = new System.Windows.Forms.Button();
+            this.btnChordDm = new System.Windows.Forms.Button();
+            this.btnChordCSm = new System.Windows.Forms.Button();
             this.btnChordFSm = new System.Windows.Forms.Button();
             this.btnChordCm = new System.Windows.Forms.Button();
             this.btnChordGS = new System.Windows.Forms.Button();
@@ -95,16 +107,6 @@
             this.btnChordC = new System.Windows.Forms.Button();
             this.btnChordAS = new System.Windows.Forms.Button();
             this.btnChordCS = new System.Windows.Forms.Button();
-            this.btnChordCSm = new System.Windows.Forms.Button();
-            this.btnChordDm = new System.Windows.Forms.Button();
-            this.btnChordDSm = new System.Windows.Forms.Button();
-            this.btnChordEm = new System.Windows.Forms.Button();
-            this.btnChordFm = new System.Windows.Forms.Button();
-            this.btnChordGm = new System.Windows.Forms.Button();
-            this.btnChordGSm = new System.Windows.Forms.Button();
-            this.btnChordAm = new System.Windows.Forms.Button();
-            this.btnChordASm = new System.Windows.Forms.Button();
-            this.btnChordHm = new System.Windows.Forms.Button();
             this.panelAddSong.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelButtons.SuspendLayout();
@@ -406,9 +408,9 @@
             // panelShowSongs
             // 
             this.panelShowSongs.Controls.Add(this.groupBox3);
-            this.panelShowSongs.Location = new System.Drawing.Point(226, 0);
+            this.panelShowSongs.Location = new System.Drawing.Point(507, 508);
             this.panelShowSongs.Name = "panelShowSongs";
-            this.panelShowSongs.Size = new System.Drawing.Size(329, 206);
+            this.panelShowSongs.Size = new System.Drawing.Size(198, 90);
             this.panelShowSongs.TabIndex = 3;
             // 
             // groupBox3
@@ -625,9 +627,9 @@
             // panelWaitList
             // 
             this.panelWaitList.Controls.Add(this.groupBox4);
-            this.panelWaitList.Location = new System.Drawing.Point(262, 298);
+            this.panelWaitList.Location = new System.Drawing.Point(224, 0);
             this.panelWaitList.Name = "panelWaitList";
-            this.panelWaitList.Size = new System.Drawing.Size(230, 103);
+            this.panelWaitList.Size = new System.Drawing.Size(760, 660);
             this.panelWaitList.TabIndex = 6;
             // 
             // groupBox4
@@ -642,14 +644,16 @@
             // panelRemoveSong
             // 
             this.panelRemoveSong.Controls.Add(this.groupBox5);
-            this.panelRemoveSong.Location = new System.Drawing.Point(550, 310);
+            this.panelRemoveSong.Location = new System.Drawing.Point(484, 169);
             this.panelRemoveSong.Name = "panelRemoveSong";
-            this.panelRemoveSong.Size = new System.Drawing.Size(188, 121);
+            this.panelRemoveSong.Size = new System.Drawing.Size(156, 78);
             this.panelRemoveSong.TabIndex = 7;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.checkedListBox1);
+            this.groupBox5.Controls.Add(this.lblRemoveStatus);
+            this.groupBox5.Controls.Add(this.btnRemoveSong);
+            this.groupBox5.Controls.Add(this.lbRemoveSong);
             this.groupBox5.Location = new System.Drawing.Point(8, 11);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(745, 639);
@@ -657,19 +661,35 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Избриши песна";
             // 
-            // checkedListBox1
+            // lblRemoveStatus
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Песна 1 - Автор 1",
-            "Песна 2",
-            "Песна 3",
-            "Песна 4",
-            "Песна 5"});
-            this.checkedListBox1.Location = new System.Drawing.Point(16, 19);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(307, 244);
-            this.checkedListBox1.TabIndex = 1;
+            this.lblRemoveStatus.AutoSize = true;
+            this.lblRemoveStatus.Location = new System.Drawing.Point(203, 607);
+            this.lblRemoveStatus.Name = "lblRemoveStatus";
+            this.lblRemoveStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblRemoveStatus.TabIndex = 2;
+            // 
+            // btnRemoveSong
+            // 
+            this.btnRemoveSong.BackColor = System.Drawing.Color.Red;
+            this.btnRemoveSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveSong.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveSong.Location = new System.Drawing.Point(392, 588);
+            this.btnRemoveSong.Name = "btnRemoveSong";
+            this.btnRemoveSong.Size = new System.Drawing.Size(169, 45);
+            this.btnRemoveSong.TabIndex = 1;
+            this.btnRemoveSong.Text = "Избриши песна";
+            this.btnRemoveSong.UseVisualStyleBackColor = false;
+            this.btnRemoveSong.Click += new System.EventHandler(this.btnRemoveSong_Click);
+            // 
+            // lbRemoveSong
+            // 
+            this.lbRemoveSong.FormattingEnabled = true;
+            this.lbRemoveSong.Location = new System.Drawing.Point(177, 19);
+            this.lbRemoveSong.Name = "lbRemoveSong";
+            this.lbRemoveSong.Size = new System.Drawing.Size(384, 563);
+            this.lbRemoveSong.TabIndex = 0;
+            this.lbRemoveSong.SelectedIndexChanged += new System.EventHandler(this.lbRemoveSong_SelectedIndexChanged);
             // 
             // panelListenChords
             // 
@@ -711,6 +731,106 @@
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Преслушај акорди";
+            // 
+            // btnChordHm
+            // 
+            this.btnChordHm.Image = global::VP_Songbook.Properties.Resources.Hm;
+            this.btnChordHm.Location = new System.Drawing.Point(630, 490);
+            this.btnChordHm.Name = "btnChordHm";
+            this.btnChordHm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordHm.TabIndex = 23;
+            this.btnChordHm.UseVisualStyleBackColor = true;
+            this.btnChordHm.Click += new System.EventHandler(this.btnChordHm_Click);
+            // 
+            // btnChordASm
+            // 
+            this.btnChordASm.Image = global::VP_Songbook.Properties.Resources.A_m;
+            this.btnChordASm.Location = new System.Drawing.Point(510, 490);
+            this.btnChordASm.Name = "btnChordASm";
+            this.btnChordASm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordASm.TabIndex = 22;
+            this.btnChordASm.UseVisualStyleBackColor = true;
+            this.btnChordASm.Click += new System.EventHandler(this.btnChordASm_Click);
+            // 
+            // btnChordAm
+            // 
+            this.btnChordAm.Image = global::VP_Songbook.Properties.Resources.Am;
+            this.btnChordAm.Location = new System.Drawing.Point(390, 490);
+            this.btnChordAm.Name = "btnChordAm";
+            this.btnChordAm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordAm.TabIndex = 21;
+            this.btnChordAm.UseVisualStyleBackColor = true;
+            this.btnChordAm.Click += new System.EventHandler(this.btnChordAm_Click);
+            // 
+            // btnChordGSm
+            // 
+            this.btnChordGSm.Image = global::VP_Songbook.Properties.Resources.G_m;
+            this.btnChordGSm.Location = new System.Drawing.Point(266, 490);
+            this.btnChordGSm.Name = "btnChordGSm";
+            this.btnChordGSm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordGSm.TabIndex = 20;
+            this.btnChordGSm.UseVisualStyleBackColor = true;
+            this.btnChordGSm.Click += new System.EventHandler(this.btnChordGSm_Click);
+            // 
+            // btnChordGm
+            // 
+            this.btnChordGm.Image = global::VP_Songbook.Properties.Resources.Gm;
+            this.btnChordGm.Location = new System.Drawing.Point(150, 490);
+            this.btnChordGm.Name = "btnChordGm";
+            this.btnChordGm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordGm.TabIndex = 19;
+            this.btnChordGm.UseVisualStyleBackColor = true;
+            this.btnChordGm.Click += new System.EventHandler(this.btnChordGm_Click);
+            // 
+            // btnChordFm
+            // 
+            this.btnChordFm.Image = global::VP_Songbook.Properties.Resources.Fm;
+            this.btnChordFm.Location = new System.Drawing.Point(630, 331);
+            this.btnChordFm.Name = "btnChordFm";
+            this.btnChordFm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordFm.TabIndex = 18;
+            this.btnChordFm.UseVisualStyleBackColor = true;
+            this.btnChordFm.Click += new System.EventHandler(this.btnChordFm_Click);
+            // 
+            // btnChordEm
+            // 
+            this.btnChordEm.Image = global::VP_Songbook.Properties.Resources.Em;
+            this.btnChordEm.Location = new System.Drawing.Point(510, 331);
+            this.btnChordEm.Name = "btnChordEm";
+            this.btnChordEm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordEm.TabIndex = 17;
+            this.btnChordEm.UseVisualStyleBackColor = true;
+            this.btnChordEm.Click += new System.EventHandler(this.btnChordEm_Click);
+            // 
+            // btnChordDSm
+            // 
+            this.btnChordDSm.Image = global::VP_Songbook.Properties.Resources.D_m;
+            this.btnChordDSm.Location = new System.Drawing.Point(390, 331);
+            this.btnChordDSm.Name = "btnChordDSm";
+            this.btnChordDSm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordDSm.TabIndex = 16;
+            this.btnChordDSm.UseVisualStyleBackColor = true;
+            this.btnChordDSm.Click += new System.EventHandler(this.btnChordDSm_Click);
+            // 
+            // btnChordDm
+            // 
+            this.btnChordDm.Image = global::VP_Songbook.Properties.Resources.Dm;
+            this.btnChordDm.Location = new System.Drawing.Point(266, 331);
+            this.btnChordDm.Name = "btnChordDm";
+            this.btnChordDm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordDm.TabIndex = 15;
+            this.btnChordDm.UseVisualStyleBackColor = true;
+            this.btnChordDm.Click += new System.EventHandler(this.btnChordDm_Click);
+            // 
+            // btnChordCSm
+            // 
+            this.btnChordCSm.Image = global::VP_Songbook.Properties.Resources.C_m;
+            this.btnChordCSm.Location = new System.Drawing.Point(150, 331);
+            this.btnChordCSm.Name = "btnChordCSm";
+            this.btnChordCSm.Size = new System.Drawing.Size(89, 150);
+            this.btnChordCSm.TabIndex = 14;
+            this.btnChordCSm.UseVisualStyleBackColor = true;
+            this.btnChordCSm.Click += new System.EventHandler(this.btnChordCSm_Click);
             // 
             // btnChordFSm
             // 
@@ -852,116 +972,16 @@
             this.btnChordCS.UseVisualStyleBackColor = true;
             this.btnChordCS.Click += new System.EventHandler(this.btnChordCS_Click);
             // 
-            // btnChordCSm
-            // 
-            this.btnChordCSm.Image = global::VP_Songbook.Properties.Resources.C_m;
-            this.btnChordCSm.Location = new System.Drawing.Point(150, 331);
-            this.btnChordCSm.Name = "btnChordCSm";
-            this.btnChordCSm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordCSm.TabIndex = 14;
-            this.btnChordCSm.UseVisualStyleBackColor = true;
-            this.btnChordCSm.Click += new System.EventHandler(this.btnChordCSm_Click);
-            // 
-            // btnChordDm
-            // 
-            this.btnChordDm.Image = global::VP_Songbook.Properties.Resources.Dm;
-            this.btnChordDm.Location = new System.Drawing.Point(266, 331);
-            this.btnChordDm.Name = "btnChordDm";
-            this.btnChordDm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordDm.TabIndex = 15;
-            this.btnChordDm.UseVisualStyleBackColor = true;
-            this.btnChordDm.Click += new System.EventHandler(this.btnChordDm_Click);
-            // 
-            // btnChordDSm
-            // 
-            this.btnChordDSm.Image = global::VP_Songbook.Properties.Resources.D_m;
-            this.btnChordDSm.Location = new System.Drawing.Point(390, 331);
-            this.btnChordDSm.Name = "btnChordDSm";
-            this.btnChordDSm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordDSm.TabIndex = 16;
-            this.btnChordDSm.UseVisualStyleBackColor = true;
-            this.btnChordDSm.Click += new System.EventHandler(this.btnChordDSm_Click);
-            // 
-            // btnChordEm
-            // 
-            this.btnChordEm.Image = global::VP_Songbook.Properties.Resources.Em;
-            this.btnChordEm.Location = new System.Drawing.Point(510, 331);
-            this.btnChordEm.Name = "btnChordEm";
-            this.btnChordEm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordEm.TabIndex = 17;
-            this.btnChordEm.UseVisualStyleBackColor = true;
-            this.btnChordEm.Click += new System.EventHandler(this.btnChordEm_Click);
-            // 
-            // btnChordFm
-            // 
-            this.btnChordFm.Image = global::VP_Songbook.Properties.Resources.Fm;
-            this.btnChordFm.Location = new System.Drawing.Point(630, 331);
-            this.btnChordFm.Name = "btnChordFm";
-            this.btnChordFm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordFm.TabIndex = 18;
-            this.btnChordFm.UseVisualStyleBackColor = true;
-            this.btnChordFm.Click += new System.EventHandler(this.btnChordFm_Click);
-            // 
-            // btnChordGm
-            // 
-            this.btnChordGm.Image = global::VP_Songbook.Properties.Resources.Gm;
-            this.btnChordGm.Location = new System.Drawing.Point(150, 490);
-            this.btnChordGm.Name = "btnChordGm";
-            this.btnChordGm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordGm.TabIndex = 19;
-            this.btnChordGm.UseVisualStyleBackColor = true;
-            this.btnChordGm.Click += new System.EventHandler(this.btnChordGm_Click);
-            // 
-            // btnChordGSm
-            // 
-            this.btnChordGSm.Image = global::VP_Songbook.Properties.Resources.G_m;
-            this.btnChordGSm.Location = new System.Drawing.Point(266, 490);
-            this.btnChordGSm.Name = "btnChordGSm";
-            this.btnChordGSm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordGSm.TabIndex = 20;
-            this.btnChordGSm.UseVisualStyleBackColor = true;
-            this.btnChordGSm.Click += new System.EventHandler(this.btnChordGSm_Click);
-            // 
-            // btnChordAm
-            // 
-            this.btnChordAm.Image = global::VP_Songbook.Properties.Resources.Am;
-            this.btnChordAm.Location = new System.Drawing.Point(390, 490);
-            this.btnChordAm.Name = "btnChordAm";
-            this.btnChordAm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordAm.TabIndex = 21;
-            this.btnChordAm.UseVisualStyleBackColor = true;
-            this.btnChordAm.Click += new System.EventHandler(this.btnChordAm_Click);
-            // 
-            // btnChordASm
-            // 
-            this.btnChordASm.Image = global::VP_Songbook.Properties.Resources.A_m;
-            this.btnChordASm.Location = new System.Drawing.Point(510, 490);
-            this.btnChordASm.Name = "btnChordASm";
-            this.btnChordASm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordASm.TabIndex = 22;
-            this.btnChordASm.UseVisualStyleBackColor = true;
-            this.btnChordASm.Click += new System.EventHandler(this.btnChordASm_Click);
-            // 
-            // btnChordHm
-            // 
-            this.btnChordHm.Image = global::VP_Songbook.Properties.Resources.Hm;
-            this.btnChordHm.Location = new System.Drawing.Point(630, 490);
-            this.btnChordHm.Name = "btnChordHm";
-            this.btnChordHm.Size = new System.Drawing.Size(89, 150);
-            this.btnChordHm.TabIndex = 23;
-            this.btnChordHm.UseVisualStyleBackColor = true;
-            this.btnChordHm.Click += new System.EventHandler(this.btnChordHm_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panelWaitList);
+            this.Controls.Add(this.panelRemoveSong);
             this.Controls.Add(this.panelListenChords);
             this.Controls.Add(this.panelAddSong);
             this.Controls.Add(this.panelShowSongs);
-            this.Controls.Add(this.panelRemoveSong);
-            this.Controls.Add(this.panelWaitList);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelAddCategory);
             this.Controls.Add(this.panelIntro);
@@ -983,6 +1003,7 @@
             this.panelWaitList.ResumeLayout(false);
             this.panelRemoveSong.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.panelListenChords.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1039,7 +1060,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panelRemoveSong;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button btnChordCS;
         private System.Windows.Forms.Button btnChordH;
         private System.Windows.Forms.Button btnChordA;
@@ -1066,6 +1086,9 @@
         private System.Windows.Forms.Button btnChordAm;
         private System.Windows.Forms.Button btnChordASm;
         private System.Windows.Forms.Button btnChordHm;
+        private System.Windows.Forms.ListBox lbRemoveSong;
+        private System.Windows.Forms.Button btnRemoveSong;
+        private System.Windows.Forms.Label lblRemoveStatus;
     }
 }
 
