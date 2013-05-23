@@ -49,9 +49,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +80,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelp.Designer.cs">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +97,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHelp.resx">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,11 +110,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.Config" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Properties\DataSources\songbookEntities2.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -195,6 +213,159 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AS.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CS.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DS.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FS.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GS.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A#m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Am.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D#m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Em.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F#m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G#m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ASm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Em.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FSm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GSm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C#m.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
