@@ -18,19 +18,22 @@ namespace VP_Songbook
         Font font1, font2, font3; //креирање на референци за фонтови
         songbookEntities2 testcontext; //
         Color backgColor;
-        ListBox lbSongs,lbRemoveSong;
+        ListBox lbSongs,lbRemoveSong,lbWaitSong;
         ComboBox cbShowCategory;
         ComboBox cbAddSongCategory;
+        ComboBox cbWaitSongCategory;
         public int currentCategory { get; set; }
         public int numbSteps { get; set; } //до каде сме со анимацијата
 
-        public Controller(Panel[] panels, ListBox _lbSongs, ComboBox _cbShowCategory, ComboBox _cbAddSongCategory, ListBox _lbRemoveSong)
+        public Controller(Panel[] panels, ListBox _lbSongs, ComboBox _cbShowCategory, ComboBox _cbAddSongCategory, ListBox _lbRemoveSong, ComboBox _cbWaitSongCategory, ListBox _lbWaitSong)
         {
             Panels = panels;
             lbSongs = _lbSongs;
             cbShowCategory = _cbShowCategory;
             cbAddSongCategory = _cbAddSongCategory;
+            cbWaitSongCategory = _cbWaitSongCategory;
             lbRemoveSong = _lbRemoveSong;
+            lbWaitSong = _lbWaitSong;
             currentCategory = -1;
             ShowPanel(0); // иницијално ги сокриваме сите панели
             Panels[1].Hide(); //како и панелот со мени
@@ -52,7 +55,7 @@ namespace VP_Songbook
             loadIntro();
             // стартување тајмерот
             loadTimer = new Timer();
-            loadTimer.Interval = 50;
+            loadTimer.Interval = 30;
             loadTimer.Tick += new EventHandler(timer_Tick);
             loadTimer.Start();
             // стартување на интро звукот
@@ -103,6 +106,7 @@ namespace VP_Songbook
                 loadTimer.Stop();
                 // иницијално поставување на листите со песни и категории
                 UpdateSongs();
+                UpdateWaitSongs();
                 UpdateCategories();
                 Panels[1].Show(); // прикажување на почетно мени
             }
@@ -235,16 +239,19 @@ namespace VP_Songbook
         }
 
         //освежување на информациите во категориите
-        public void UpdateCategories()   {
+        public void UpdateCategories() {
             int temp = cbAddSongCategory.SelectedIndex;
             int temp2 = cbShowCategory.SelectedIndex;
+            int temp3 = cbWaitSongCategory.SelectedIndex;
             var load = from g in testcontext.categories select g;
             if (load != null)
             {
                 cbAddSongCategory.DataSource = load.ToList();
                 cbShowCategory.DataSource = load.ToList();
+                cbWaitSongCategory.DataSource = load.ToList();
                 cbAddSongCategory.SelectedIndex = temp;
                 cbShowCategory.SelectedIndex = temp2;
+                cbWaitSongCategory.SelectedIndex = temp3;
             }
 
             //osvezuvanje na kategoriite kaj pregledaj pesna
@@ -277,6 +284,61 @@ namespace VP_Songbook
             {
                 MessageBox.Show(ex.InnerException.ToString());
                 return false;
+            }
+        }
+
+        public bool AddWaitSong(String _author, String _name, int _id_category)
+        {
+            try
+            {
+                waitsong pesna = new waitsong
+                {
+                    id_waitsong=1,
+                    author_waitsong=_author,
+                    name_waitsong=_name,
+                    id_category=_id_category
+                };
+                testcontext.waitsongs.AddObject(pesna);
+                testcontext.SaveChanges();
+                UpdateWaitSongs();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.InnerException.ToString());
+                MessageBox.Show("Настана проблем при додавање на песната во листата на чекање.\nПроверете ја вашата интернет конекција.", "Грешка при внесување");
+                return false;
+            }
+        }
+
+        public void UpdateWaitSongs()
+        {
+            var load = from g in testcontext.waitsongs select g;
+            if (load != null)
+            {
+                lbWaitSong.DataSource = load.ToList();
+            }
+            else
+            {
+                lbWaitSong.Items.Clear();
+            }
+        }
+
+        public void RemoveWaitSong()
+        {
+            waitsong p = lbWaitSong.SelectedItem as waitsong;
+            int songId = p.id_waitsong;
+            MessageBox.Show("ID=" + songId);
+            try
+            {
+                waitsong pesna = testcontext.waitsongs.First(i => i.id_waitsong == songId);
+                testcontext.waitsongs.DeleteObject(pesna);
+                testcontext.SaveChanges();
+                UpdateWaitSongs();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.InnerException.ToString());
             }
         }
     }

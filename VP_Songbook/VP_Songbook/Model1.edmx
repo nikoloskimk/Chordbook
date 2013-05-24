@@ -129,8 +129,8 @@
     <Diagrams>
       <Diagram Name="Model1">
         <EntityTypeShape EntityType="songbookModel.category" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583331" IsExpanded="true" />
-        <EntityTypeShape EntityType="songbookModel.song" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
-        <EntityTypeShape EntityType="songbookModel.waitsong" Width="1.5" PointX="0.75" PointY="3.75" Height="1.787985026041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="songbookModel.song" Width="1.5" PointX="2.875" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="songbookModel.waitsong" Width="1.5" PointX="5" PointY="0.75" Height="1.787985026041667" IsExpanded="true" />
       </Diagram>
     </Diagrams>
   </Designer>

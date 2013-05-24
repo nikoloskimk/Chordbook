@@ -76,6 +76,17 @@
             this.tbAddCategory = new System.Windows.Forms.TextBox();
             this.panelWaitList = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblWaitSongSuccess = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnAddToWaitSong = new System.Windows.Forms.Button();
+            this.cbWaitSongCategory = new System.Windows.Forms.ComboBox();
+            this.tbWaitSongName = new System.Windows.Forms.TextBox();
+            this.tbWaitSongAuthor = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnWaitSongRemove = new System.Windows.Forms.Button();
+            this.lbWaitSong = new System.Windows.Forms.ListBox();
             this.panelRemoveSong = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblRemoveStatus = new System.Windows.Forms.Label();
@@ -107,6 +118,10 @@
             this.btnChordC = new System.Windows.Forms.Button();
             this.btnChordAS = new System.Windows.Forms.Button();
             this.btnChordCS = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tbWaitSong = new System.Windows.Forms.TextBox();
+            this.btnAddFromWaitToSongs = new System.Windows.Forms.Button();
+            this.lblWaitAdd = new System.Windows.Forms.Label();
             this.panelAddSong.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelButtons.SuspendLayout();
@@ -116,10 +131,13 @@
             this.panelAddCategory.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelWaitList.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.panelRemoveSong.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panelListenChords.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelIntro
@@ -634,12 +652,127 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.groupBox8);
+            this.groupBox4.Controls.Add(this.groupBox7);
+            this.groupBox4.Controls.Add(this.btnWaitSongRemove);
+            this.groupBox4.Controls.Add(this.lbWaitSong);
             this.groupBox4.Location = new System.Drawing.Point(8, 11);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(745, 639);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Листа на чекање";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.lblWaitSongSuccess);
+            this.groupBox7.Controls.Add(this.label9);
+            this.groupBox7.Controls.Add(this.btnAddToWaitSong);
+            this.groupBox7.Controls.Add(this.cbWaitSongCategory);
+            this.groupBox7.Controls.Add(this.tbWaitSongName);
+            this.groupBox7.Controls.Add(this.tbWaitSongAuthor);
+            this.groupBox7.Controls.Add(this.label8);
+            this.groupBox7.Controls.Add(this.label1);
+            this.groupBox7.Location = new System.Drawing.Point(283, 25);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(456, 190);
+            this.groupBox7.TabIndex = 2;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Додади песна во листата на чекање";
+            // 
+            // lblWaitSongSuccess
+            // 
+            this.lblWaitSongSuccess.AutoSize = true;
+            this.lblWaitSongSuccess.Location = new System.Drawing.Point(7, 163);
+            this.lblWaitSongSuccess.Name = "lblWaitSongSuccess";
+            this.lblWaitSongSuccess.Size = new System.Drawing.Size(0, 13);
+            this.lblWaitSongSuccess.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(22, 109);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Категорија:";
+            // 
+            // btnAddToWaitSong
+            // 
+            this.btnAddToWaitSong.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddToWaitSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddToWaitSong.ForeColor = System.Drawing.Color.White;
+            this.btnAddToWaitSong.Location = new System.Drawing.Point(274, 140);
+            this.btnAddToWaitSong.Name = "btnAddToWaitSong";
+            this.btnAddToWaitSong.Size = new System.Drawing.Size(164, 39);
+            this.btnAddToWaitSong.TabIndex = 5;
+            this.btnAddToWaitSong.Text = "Додади во листа на чекање";
+            this.btnAddToWaitSong.UseVisualStyleBackColor = false;
+            this.btnAddToWaitSong.Click += new System.EventHandler(this.btnAddToWaitSong_Click);
+            // 
+            // cbWaitSongCategory
+            // 
+            this.cbWaitSongCategory.FormattingEnabled = true;
+            this.cbWaitSongCategory.Location = new System.Drawing.Point(135, 103);
+            this.cbWaitSongCategory.Name = "cbWaitSongCategory";
+            this.cbWaitSongCategory.Size = new System.Drawing.Size(303, 21);
+            this.cbWaitSongCategory.TabIndex = 4;
+            this.cbWaitSongCategory.Validating += new System.ComponentModel.CancelEventHandler(this.cbWaitSongCategory_Validating);
+            // 
+            // tbWaitSongName
+            // 
+            this.tbWaitSongName.Location = new System.Drawing.Point(135, 69);
+            this.tbWaitSongName.Name = "tbWaitSongName";
+            this.tbWaitSongName.Size = new System.Drawing.Size(303, 20);
+            this.tbWaitSongName.TabIndex = 3;
+            this.tbWaitSongName.Validating += new System.ComponentModel.CancelEventHandler(this.tbWaitSongName_Validating);
+            // 
+            // tbWaitSongAuthor
+            // 
+            this.tbWaitSongAuthor.Location = new System.Drawing.Point(135, 34);
+            this.tbWaitSongAuthor.Name = "tbWaitSongAuthor";
+            this.tbWaitSongAuthor.Size = new System.Drawing.Size(303, 20);
+            this.tbWaitSongAuthor.TabIndex = 2;
+            this.tbWaitSongAuthor.Validating += new System.ComponentModel.CancelEventHandler(this.tbWaitSongAuthor_Validating);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Име на песната:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Автор на песната:";
+            // 
+            // btnWaitSongRemove
+            // 
+            this.btnWaitSongRemove.BackColor = System.Drawing.Color.Red;
+            this.btnWaitSongRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWaitSongRemove.ForeColor = System.Drawing.Color.White;
+            this.btnWaitSongRemove.Location = new System.Drawing.Point(17, 584);
+            this.btnWaitSongRemove.Name = "btnWaitSongRemove";
+            this.btnWaitSongRemove.Size = new System.Drawing.Size(260, 43);
+            this.btnWaitSongRemove.TabIndex = 1;
+            this.btnWaitSongRemove.Text = "Избриши песна од листата на чекање";
+            this.btnWaitSongRemove.UseVisualStyleBackColor = false;
+            this.btnWaitSongRemove.Click += new System.EventHandler(this.btnWaitSongRemove_Click);
+            // 
+            // lbWaitSong
+            // 
+            this.lbWaitSong.FormattingEnabled = true;
+            this.lbWaitSong.Location = new System.Drawing.Point(17, 28);
+            this.lbWaitSong.Name = "lbWaitSong";
+            this.lbWaitSong.Size = new System.Drawing.Size(260, 550);
+            this.lbWaitSong.TabIndex = 0;
             // 
             // panelRemoveSong
             // 
@@ -972,6 +1105,47 @@
             this.btnChordCS.UseVisualStyleBackColor = true;
             this.btnChordCS.Click += new System.EventHandler(this.btnChordCS_Click);
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblWaitAdd);
+            this.groupBox8.Controls.Add(this.btnAddFromWaitToSongs);
+            this.groupBox8.Controls.Add(this.tbWaitSong);
+            this.groupBox8.Location = new System.Drawing.Point(283, 221);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(457, 412);
+            this.groupBox8.TabIndex = 3;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Додади текст на песната";
+            // 
+            // tbWaitSong
+            // 
+            this.tbWaitSong.Location = new System.Drawing.Point(7, 17);
+            this.tbWaitSong.Multiline = true;
+            this.tbWaitSong.Name = "tbWaitSong";
+            this.tbWaitSong.Size = new System.Drawing.Size(444, 342);
+            this.tbWaitSong.TabIndex = 0;
+            // 
+            // btnAddFromWaitToSongs
+            // 
+            this.btnAddFromWaitToSongs.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddFromWaitToSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFromWaitToSongs.ForeColor = System.Drawing.Color.White;
+            this.btnAddFromWaitToSongs.Location = new System.Drawing.Point(228, 366);
+            this.btnAddFromWaitToSongs.Name = "btnAddFromWaitToSongs";
+            this.btnAddFromWaitToSongs.Size = new System.Drawing.Size(223, 43);
+            this.btnAddFromWaitToSongs.TabIndex = 1;
+            this.btnAddFromWaitToSongs.Text = "Додади песна";
+            this.btnAddFromWaitToSongs.UseVisualStyleBackColor = false;
+            this.btnAddFromWaitToSongs.Click += new System.EventHandler(this.btnAddFromWaitToSongs_Click);
+            // 
+            // lblWaitAdd
+            // 
+            this.lblWaitAdd.AutoSize = true;
+            this.lblWaitAdd.Location = new System.Drawing.Point(4, 381);
+            this.lblWaitAdd.Name = "lblWaitAdd";
+            this.lblWaitAdd.Size = new System.Drawing.Size(0, 13);
+            this.lblWaitAdd.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1001,11 +1175,16 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panelWaitList.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.panelRemoveSong.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.panelListenChords.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1089,6 +1268,21 @@
         private System.Windows.Forms.ListBox lbRemoveSong;
         private System.Windows.Forms.Button btnRemoveSong;
         private System.Windows.Forms.Label lblRemoveStatus;
+        private System.Windows.Forms.Button btnWaitSongRemove;
+        private System.Windows.Forms.ListBox lbWaitSong;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbWaitSongName;
+        private System.Windows.Forms.TextBox tbWaitSongAuthor;
+        private System.Windows.Forms.Button btnAddToWaitSong;
+        private System.Windows.Forms.ComboBox cbWaitSongCategory;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblWaitSongSuccess;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button btnAddFromWaitToSongs;
+        private System.Windows.Forms.TextBox tbWaitSong;
+        private System.Windows.Forms.Label lblWaitAdd;
     }
 }
 
