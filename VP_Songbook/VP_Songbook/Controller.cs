@@ -24,7 +24,7 @@ namespace VP_Songbook
         ComboBox cbWaitSongCategory;
         public int currentCategory { get; set; }
         public int numbSteps { get; set; } //до каде сме со анимацијата
-
+        //конструктор
         public Controller(Panel[] panels, ListBox _lbSongs, ComboBox _cbShowCategory, ComboBox _cbAddSongCategory, ListBox _lbRemoveSong, ComboBox _cbWaitSongCategory, ListBox _lbWaitSong)
         {
             Panels = panels;
@@ -49,9 +49,9 @@ namespace VP_Songbook
             font1 = new Font("Arial", 30);
             font2 = new Font("Arial", 20);
             font3 = new Font("Arial", 16);
-
+            // иницијализација на контекстот ???
             testcontext = new songbookEntities2();
-
+            // прикажување на интро панелот кој се освежува потоа на секој тик на тајмерот
             loadIntro();
             // стартување тајмерот
             loadTimer = new Timer();
@@ -63,13 +63,11 @@ namespace VP_Songbook
             player.Play();
 
         }
-
         //на секој такт на тајмерот се повикува методот за анимација на интрото 
         void timer_Tick(object sender, EventArgs e)
         {
             loadIntro();
         }
-
         //овој метод овозможува исцртување на интро информациите за апликацијата
         //така што во секое негово повикување дел од текстот го придвижуваме 
         // и после одредено време, одкако ќе заврши анимацијата се прикажува почетното мени
@@ -85,8 +83,8 @@ namespace VP_Songbook
                 if (do_kade < 290) { do_kade = 290; }
                 buffGraph.DrawString("Песнарка со акорди", font1, brushBlue, new PointF(do_kade, 460));
                 buffGraph.DrawString("Визуелно Програмирање 2012/13", font2, brushRed, new PointF(270, 510));
-                int finki = -40 + numbSteps;
-                if (finki > 20) { finki = 20; }
+                int finki = -45 + numbSteps;
+                if (finki > 10) { finki = 10; }
                 buffGraph.DrawString("Факултет за информатички науки и компјутерско инжинерство (ФИНКИ) - Скопје", font3, brushDodgerBlue, new PointF(60, finki));
                 buffGraph.DrawString("Филип Николоски (111154)", font3, brushDodgerBlue, new PointF(705, 590));
                 buffGraph.DrawString("Александра Пазаркоска (115049)", font3, brushDodgerBlue, new PointF(640, 620));
@@ -111,7 +109,6 @@ namespace VP_Songbook
                 Panels[1].Show(); // прикажување на почетно мени
             }
         }
-
         //овој метод овозможува прикажување на само еден панел во одредено време со тоа што
         //за прикажување на интро панелот(0) и мени панелот(1) се грижиме ние самите
         public void ShowPanel(int num)
@@ -128,7 +125,6 @@ namespace VP_Songbook
                 }
             }
         }
-
         //метод за додавање на нова песна во базата
         public bool AddSong(String _author, String _name, String _text, int _id_category)
         {
@@ -163,7 +159,6 @@ namespace VP_Songbook
                 return false;
             }
         }
-
         //метод за додавање на нова категорија во базата
         public bool AddCategory(String _category)
         {
@@ -186,7 +181,6 @@ namespace VP_Songbook
                 return false;
             }
         }
-
         //метод за ажурирање на листата на песни
         //го повикуваме на почетокот на апликацијата
         //како и секогаш кога правиме некава промена (додавање или бришење на песна)
@@ -212,7 +206,6 @@ namespace VP_Songbook
                 lbRemoveSong.SelectedIndex = -1;
             }
         }
-
         //преоптоварен метод за ажурање на листата на песни
         //кој што прикажува песни од дадена категорија
         //кој воедно го користиме и за пребарување низ песните со тоа што
@@ -237,7 +230,6 @@ namespace VP_Songbook
 
             }
         }
-
         //освежување на информациите во категориите
         public void UpdateCategories() {
             int temp = cbAddSongCategory.SelectedIndex;
@@ -267,7 +259,7 @@ namespace VP_Songbook
 
             
         }
-
+        //метод за бришење на песна
         public bool RemoveSong()
         {
             song p = lbRemoveSong.SelectedItem as song;
@@ -286,7 +278,7 @@ namespace VP_Songbook
                 return false;
             }
         }
-
+        //метод за додавање на песна во листата на чекање
         public bool AddWaitSong(String _author, String _name, int _id_category)
         {
             try
@@ -310,7 +302,7 @@ namespace VP_Songbook
                 return false;
             }
         }
-
+        //метод за освежување на листата на чекање
         public void UpdateWaitSongs()
         {
             var load = from g in testcontext.waitsongs select g;
@@ -323,12 +315,13 @@ namespace VP_Songbook
                 lbWaitSong.Items.Clear();
             }
         }
-
+        //метод за бришење на песна од листата на чекање
+        //се повикува или кога сакаме да ја избришеме песна од листата на чекање
+        //или кога ќе го внесеме текстот на песната и ќе сакаме да ја префрлиме во базата на песни
         public void RemoveWaitSong()
         {
             waitsong p = lbWaitSong.SelectedItem as waitsong;
             int songId = p.id_waitsong;
-            MessageBox.Show("ID=" + songId);
             try
             {
                 waitsong pesna = testcontext.waitsongs.First(i => i.id_waitsong == songId);
@@ -338,6 +331,7 @@ namespace VP_Songbook
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Настана проблем при бришењето на песната од листата на чекање.\nПроверете ја вашата интернет конекција.", "Грешка при бришење");
                 MessageBox.Show(ex.InnerException.ToString());
             }
         }

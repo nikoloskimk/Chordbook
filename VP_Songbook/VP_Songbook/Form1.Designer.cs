@@ -76,6 +76,10 @@
             this.tbAddCategory = new System.Windows.Forms.TextBox();
             this.panelWaitList = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblWaitAdd = new System.Windows.Forms.Label();
+            this.btnAddFromWaitToSongs = new System.Windows.Forms.Button();
+            this.tbWaitSong = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.lblWaitSongSuccess = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -118,10 +122,6 @@
             this.btnChordC = new System.Windows.Forms.Button();
             this.btnChordAS = new System.Windows.Forms.Button();
             this.btnChordCS = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.tbWaitSong = new System.Windows.Forms.TextBox();
-            this.btnAddFromWaitToSongs = new System.Windows.Forms.Button();
-            this.lblWaitAdd = new System.Windows.Forms.Label();
             this.panelAddSong.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelButtons.SuspendLayout();
@@ -132,27 +132,27 @@
             this.groupBox2.SuspendLayout();
             this.panelWaitList.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.panelRemoveSong.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panelListenChords.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelIntro
             // 
-            this.panelIntro.Location = new System.Drawing.Point(484, 17);
+            this.panelIntro.Location = new System.Drawing.Point(241, 11);
             this.panelIntro.Name = "panelIntro";
-            this.panelIntro.Size = new System.Drawing.Size(166, 84);
+            this.panelIntro.Size = new System.Drawing.Size(173, 136);
             this.panelIntro.TabIndex = 0;
             // 
             // panelAddSong
             // 
             this.panelAddSong.Controls.Add(this.groupBox1);
-            this.panelAddSong.Location = new System.Drawing.Point(270, 478);
+            this.panelAddSong.Location = new System.Drawing.Point(241, 154);
             this.panelAddSong.Name = "panelAddSong";
-            this.panelAddSong.Size = new System.Drawing.Size(132, 129);
+            this.panelAddSong.Size = new System.Drawing.Size(173, 136);
             this.panelAddSong.TabIndex = 4;
             // 
             // groupBox1
@@ -212,7 +212,7 @@
             this.btnAddSongClear.Location = new System.Drawing.Point(167, 592);
             this.btnAddSongClear.Name = "btnAddSongClear";
             this.btnAddSongClear.Size = new System.Drawing.Size(173, 41);
-            this.btnAddSongClear.TabIndex = 10;
+            this.btnAddSongClear.TabIndex = 5;
             this.btnAddSongClear.Text = "Испразни полиња";
             this.btnAddSongClear.UseVisualStyleBackColor = false;
             this.btnAddSongClear.Click += new System.EventHandler(this.btnAddSongClear_Click);
@@ -241,7 +241,7 @@
             this.tbAddText.Name = "tbAddText";
             this.tbAddText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbAddText.Size = new System.Drawing.Size(562, 480);
-            this.tbAddText.TabIndex = 2;
+            this.tbAddText.TabIndex = 3;
             this.tbAddText.Validating += new System.ComponentModel.CancelEventHandler(this.tbAddText_Validating);
             // 
             // cbAddSongCategory
@@ -250,7 +250,7 @@
             this.cbAddSongCategory.Location = new System.Drawing.Point(167, 73);
             this.cbAddSongCategory.Name = "cbAddSongCategory";
             this.cbAddSongCategory.Size = new System.Drawing.Size(373, 21);
-            this.cbAddSongCategory.TabIndex = 5;
+            this.cbAddSongCategory.TabIndex = 2;
             this.cbAddSongCategory.Validating += new System.ComponentModel.CancelEventHandler(this.cbAddSongCategory_Validating);
             // 
             // label5
@@ -426,9 +426,9 @@
             // panelShowSongs
             // 
             this.panelShowSongs.Controls.Add(this.groupBox3);
-            this.panelShowSongs.Location = new System.Drawing.Point(507, 508);
+            this.panelShowSongs.Location = new System.Drawing.Point(624, 153);
             this.panelShowSongs.Name = "panelShowSongs";
-            this.panelShowSongs.Size = new System.Drawing.Size(198, 90);
+            this.panelShowSongs.Size = new System.Drawing.Size(173, 137);
             this.panelShowSongs.TabIndex = 3;
             // 
             // groupBox3
@@ -587,9 +587,9 @@
             // panelAddCategory
             // 
             this.panelAddCategory.Controls.Add(this.groupBox2);
-            this.panelAddCategory.Location = new System.Drawing.Point(780, 469);
+            this.panelAddCategory.Location = new System.Drawing.Point(807, 11);
             this.panelAddCategory.Name = "panelAddCategory";
-            this.panelAddCategory.Size = new System.Drawing.Size(144, 58);
+            this.panelAddCategory.Size = new System.Drawing.Size(171, 136);
             this.panelAddCategory.TabIndex = 5;
             // 
             // groupBox2
@@ -645,9 +645,9 @@
             // panelWaitList
             // 
             this.panelWaitList.Controls.Add(this.groupBox4);
-            this.panelWaitList.Location = new System.Drawing.Point(224, 0);
+            this.panelWaitList.Location = new System.Drawing.Point(624, 11);
             this.panelWaitList.Name = "panelWaitList";
-            this.panelWaitList.Size = new System.Drawing.Size(760, 660);
+            this.panelWaitList.Size = new System.Drawing.Size(173, 136);
             this.panelWaitList.TabIndex = 6;
             // 
             // groupBox4
@@ -662,6 +662,47 @@
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Листа на чекање";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblWaitAdd);
+            this.groupBox8.Controls.Add(this.btnAddFromWaitToSongs);
+            this.groupBox8.Controls.Add(this.tbWaitSong);
+            this.groupBox8.Location = new System.Drawing.Point(283, 221);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(457, 412);
+            this.groupBox8.TabIndex = 3;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Додади текст на песната";
+            // 
+            // lblWaitAdd
+            // 
+            this.lblWaitAdd.AutoSize = true;
+            this.lblWaitAdd.Location = new System.Drawing.Point(4, 381);
+            this.lblWaitAdd.Name = "lblWaitAdd";
+            this.lblWaitAdd.Size = new System.Drawing.Size(0, 13);
+            this.lblWaitAdd.TabIndex = 2;
+            // 
+            // btnAddFromWaitToSongs
+            // 
+            this.btnAddFromWaitToSongs.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddFromWaitToSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFromWaitToSongs.ForeColor = System.Drawing.Color.White;
+            this.btnAddFromWaitToSongs.Location = new System.Drawing.Point(228, 366);
+            this.btnAddFromWaitToSongs.Name = "btnAddFromWaitToSongs";
+            this.btnAddFromWaitToSongs.Size = new System.Drawing.Size(223, 43);
+            this.btnAddFromWaitToSongs.TabIndex = 1;
+            this.btnAddFromWaitToSongs.Text = "Додади песна";
+            this.btnAddFromWaitToSongs.UseVisualStyleBackColor = false;
+            this.btnAddFromWaitToSongs.Click += new System.EventHandler(this.btnAddFromWaitToSongs_Click);
+            // 
+            // tbWaitSong
+            // 
+            this.tbWaitSong.Location = new System.Drawing.Point(7, 17);
+            this.tbWaitSong.Multiline = true;
+            this.tbWaitSong.Name = "tbWaitSong";
+            this.tbWaitSong.Size = new System.Drawing.Size(444, 342);
+            this.tbWaitSong.TabIndex = 0;
             // 
             // groupBox7
             // 
@@ -777,9 +818,9 @@
             // panelRemoveSong
             // 
             this.panelRemoveSong.Controls.Add(this.groupBox5);
-            this.panelRemoveSong.Location = new System.Drawing.Point(484, 169);
+            this.panelRemoveSong.Location = new System.Drawing.Point(434, 154);
             this.panelRemoveSong.Name = "panelRemoveSong";
-            this.panelRemoveSong.Size = new System.Drawing.Size(156, 78);
+            this.panelRemoveSong.Size = new System.Drawing.Size(173, 136);
             this.panelRemoveSong.TabIndex = 7;
             // 
             // groupBox5
@@ -827,9 +868,9 @@
             // panelListenChords
             // 
             this.panelListenChords.Controls.Add(this.groupBox6);
-            this.panelListenChords.Location = new System.Drawing.Point(673, 89);
+            this.panelListenChords.Location = new System.Drawing.Point(434, 11);
             this.panelListenChords.Name = "panelListenChords";
-            this.panelListenChords.Size = new System.Drawing.Size(178, 170);
+            this.panelListenChords.Size = new System.Drawing.Size(173, 136);
             this.panelListenChords.TabIndex = 8;
             // 
             // groupBox6
@@ -1105,56 +1146,15 @@
             this.btnChordCS.UseVisualStyleBackColor = true;
             this.btnChordCS.Click += new System.EventHandler(this.btnChordCS_Click);
             // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.lblWaitAdd);
-            this.groupBox8.Controls.Add(this.btnAddFromWaitToSongs);
-            this.groupBox8.Controls.Add(this.tbWaitSong);
-            this.groupBox8.Location = new System.Drawing.Point(283, 221);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(457, 412);
-            this.groupBox8.TabIndex = 3;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Додади текст на песната";
-            // 
-            // tbWaitSong
-            // 
-            this.tbWaitSong.Location = new System.Drawing.Point(7, 17);
-            this.tbWaitSong.Multiline = true;
-            this.tbWaitSong.Name = "tbWaitSong";
-            this.tbWaitSong.Size = new System.Drawing.Size(444, 342);
-            this.tbWaitSong.TabIndex = 0;
-            // 
-            // btnAddFromWaitToSongs
-            // 
-            this.btnAddFromWaitToSongs.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAddFromWaitToSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFromWaitToSongs.ForeColor = System.Drawing.Color.White;
-            this.btnAddFromWaitToSongs.Location = new System.Drawing.Point(228, 366);
-            this.btnAddFromWaitToSongs.Name = "btnAddFromWaitToSongs";
-            this.btnAddFromWaitToSongs.Size = new System.Drawing.Size(223, 43);
-            this.btnAddFromWaitToSongs.TabIndex = 1;
-            this.btnAddFromWaitToSongs.Text = "Додади песна";
-            this.btnAddFromWaitToSongs.UseVisualStyleBackColor = false;
-            this.btnAddFromWaitToSongs.Click += new System.EventHandler(this.btnAddFromWaitToSongs_Click);
-            // 
-            // lblWaitAdd
-            // 
-            this.lblWaitAdd.AutoSize = true;
-            this.lblWaitAdd.Location = new System.Drawing.Point(4, 381);
-            this.lblWaitAdd.Name = "lblWaitAdd";
-            this.lblWaitAdd.Size = new System.Drawing.Size(0, 13);
-            this.lblWaitAdd.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panelAddSong);
             this.Controls.Add(this.panelWaitList);
             this.Controls.Add(this.panelRemoveSong);
             this.Controls.Add(this.panelListenChords);
-            this.Controls.Add(this.panelAddSong);
             this.Controls.Add(this.panelShowSongs);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelAddCategory);
@@ -1176,6 +1176,8 @@
             this.groupBox2.PerformLayout();
             this.panelWaitList.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.panelRemoveSong.ResumeLayout(false);
@@ -1183,8 +1185,6 @@
             this.groupBox5.PerformLayout();
             this.panelListenChords.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
