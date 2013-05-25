@@ -444,16 +444,6 @@ namespace VP_Songbook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gitara {
-            get {
-                object obj = ResourceManager.GetObject("gitara", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Gm {
             get {
                 object obj = ResourceManager.GetObject("Gm", resourceCulture);

@@ -57,6 +57,7 @@ namespace VP_Songbook
             }
             catch (Exception e)
             {
+                MessageBox.Show("Неуспешно поврзување со базата.");
                 MessageBox.Show(e.Message);
                 Process.GetCurrentProcess().Kill();
             }

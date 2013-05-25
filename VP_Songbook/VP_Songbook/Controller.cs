@@ -154,8 +154,8 @@ namespace VP_Songbook
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.InnerException.ToString());
                 MessageBox.Show("Настана проблем при додавање на песната.\nПроверете ја вашата интернет конекција.","Грешка при внесување");
+                MessageBox.Show(ex.InnerException.ToString()); 
                 return false;
             }
         }
@@ -176,8 +176,8 @@ namespace VP_Songbook
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.InnerException.ToString());
                 MessageBox.Show("Настана проблем при додавање на категоријата.\nПроверете ја вашата интернет конекција.", "Грешка при внесување");
+                MessageBox.Show(ex.InnerException.ToString()); 
                 return false;
             }
         }
@@ -274,6 +274,7 @@ namespace VP_Songbook
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Настана проблем при бришење на песна.\nПроверете ја вашата интернет конекција.", "Грешка при бришење");
                 MessageBox.Show(ex.InnerException.ToString());
                 return false;
             }
@@ -297,8 +298,8 @@ namespace VP_Songbook
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.InnerException.ToString());
                 MessageBox.Show("Настана проблем при додавање на песната во листата на чекање.\nПроверете ја вашата интернет конекција.", "Грешка при внесување");
+                MessageBox.Show(ex.InnerException.ToString()); 
                 return false;
             }
         }
